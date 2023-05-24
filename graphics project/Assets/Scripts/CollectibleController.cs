@@ -20,10 +20,10 @@ public class CollectibleController : MonoBehaviour
     {
         if (transform.position.y < lower) {
             transform.position.Set(transform.position.x, lower, transform.position.z);
-            v *= -1;
+            v.Set(v.x, Mathf.Abs(v.y), v.z);
         } else if (transform.position.y > upper) {
             transform.position.Set(transform.position.x, upper, transform.position.z);
-            v *= -1;
+            v.Set(v.x, -Mathf.Abs(v.y), v.z);
         }
 
         transform.position = transform.position + v * Time.deltaTime;
