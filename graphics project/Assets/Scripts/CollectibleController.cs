@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectibleController : MonoBehaviour
 {
     public int speed;
+    public double rate;
     // uppper/lower bounds to "bounce" off
     private int upper, lower;
     private Vector3 v;
