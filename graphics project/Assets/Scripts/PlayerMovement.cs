@@ -19,4 +19,10 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
     }
+
+    void OnTriggerEnter(Collider collision) {
+        if (collision.gameObject.CompareTag("Collectible")) {
+            collision.gameObject.SetActive(false);
+        }
+    }
 }
