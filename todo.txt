@@ -1,0 +1,14 @@
+﻿Potential questions
+* Mouse look 
+* Gradually affect time
+* Other options to control time (slider, mouse right/left click, q and e)
+
+
+
+
+Next steps:
+* Add jumping (sydney)
+* Control time w/ q and e (daniel)
+* Add display current time (daniel)
+* Add growing element (cube to represent a plant) (marvin)
+* Think of other elements to add to individual levels and implement basics in test scene (jackie / all)
