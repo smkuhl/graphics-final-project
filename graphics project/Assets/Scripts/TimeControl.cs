@@ -15,8 +15,10 @@ public class TimeControl : MonoBehaviour
     {
         Time.timeScale = 1.0f;
 
-        if (Input.GetMouseButton(1)) {
+        if (Input.GetMouseButton(0)) {
             Time.timeScale = 0.5f;
+        } else if (Input.GetMouseButton(1)){
+            Time.timeScale = 2f;
         }
     }
 }
