@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TimeControl : MonoBehaviour
 {
+    public TMP_Text timeText;
     private float fixedDeltaTime;
 
     void awake() {
@@ -13,12 +15,11 @@ public class TimeControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Time.timeScale = 1.0f;
-
-        if (Input.GetMouseButton(0)) {
-            Time.timeScale = 0.5f;
-        } else if (Input.GetMouseButton(1)){
-            Time.timeScale = 2f;
+        timeText.text = "Time: " + Time.timeScale + "x";
+        if (Input.GetKeyDown("q")) {
+            Time.timeScale -= 0.25f;
+        } else if (Input.GetKeyDown("e")){
+            Time.timeScale += 0.25f;
         }
     }
 }
