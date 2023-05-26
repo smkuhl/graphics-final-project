@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(transform.position.y < -10){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0){
@@ -32,15 +37,16 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
+        // speed = speed / Time.timeScale;w
+        controller.Move(move * speed * Time.unscaledDeltaTime);
 
         if(Input.GetButtonDown("Jump") && isGrounded){
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * Time.unscaledDeltaTime;
         // delta y = 1/2 g t^2
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity * Time.unscaledDeltaTime);
 
     }
 
