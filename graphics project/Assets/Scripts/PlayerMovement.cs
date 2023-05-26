@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -10){
+        if(transform.position.y < -50){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded && velocity.y < 0){
             velocity.y = -2f;
-            Debug.Log("on ground");
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -52,6 +51,11 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter(Collider collision) {
         if (collision.gameObject.CompareTag("Collectible")) {
             collision.gameObject.SetActive(false);
+        }
+        
+        if (collision.gameObject.CompareTag("Swing"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
