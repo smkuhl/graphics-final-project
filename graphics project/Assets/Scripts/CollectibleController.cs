@@ -5,15 +5,14 @@ using UnityEngine;
 public class CollectibleController : MonoBehaviour
 {
     public int speed;
-    public double rate;
     // uppper/lower bounds to "bounce" off
-    private int upper, lower;
+    private float upper, lower;
     private Vector3 v;
 
     void Start() {
         v = new Vector3(0, speed, 0);
-        upper = 4;
-        lower = 2;
+        upper = transform.position.y + 4;
+        lower = transform.position.y;
     }
 
     // Update is called once per frame
