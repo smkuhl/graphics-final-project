@@ -8,6 +8,6 @@ to do:
   - level 3: medium hard (Marvin)
   - level 4: hard (Daniel)
 - main menu (Jackie)
-- transitions between levels / other ui (Marvin)
+- transitions between levels, other ui: timer/countdown (Marvin)
 - add sound (Sydney)
 
