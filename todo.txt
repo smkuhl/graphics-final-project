@@ -1,8 +1,13 @@
 Next steps:
-* Add growing element (cube to represent a plant) (marvin) ASAP
+* Add growing element (cube to represent a plant) (marvin figure out how to push pls) ASAP
 
 to do:
 - individual puzzles (everyone pls be done (or basically done) by wednesday 5/31 night)
+  - level 1: intro level, easy, one puzzle component, only need to slow down time (Jackie)
+  - level 2: medium (Sydney)
+  - level 3: medium hard (Marvin)
+  - level 4: hard (Daniel)
 - main menu (Jackie)
-- transitions between levels (Marvin)
+- transitions between levels / other ui (Marvin)
 - add sound (Sydney)
+
