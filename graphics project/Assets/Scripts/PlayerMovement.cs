@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Swing"))
         {
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
