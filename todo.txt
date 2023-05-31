@@ -1,14 +1,8 @@
-﻿Potential questions
-* Mouse look 
-* Gradually affect time
-* Other options to control time (slider, mouse right/left click, q and e)
-
-
-
-
 Next steps:
-* Add jumping (sydney)
-* Control time w/ q and e (daniel)
-* Add display current time (daniel)
-* Add growing element (cube to represent a plant) (marvin)
-* Think of other elements to add to individual levels and implement basics in test scene (jackie / all)
+* Add growing element (cube to represent a plant) (marvin) ASAP
+
+to do:
+- individual puzzles (everyone pls be done (or basically done) by wednesday 5/31 night)
+- main menu (Jackie)
+- transitions between levels (Marvin)
+- add sound (Sydney)

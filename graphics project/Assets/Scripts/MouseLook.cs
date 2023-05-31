@@ -19,8 +19,8 @@ public class MouseLook : MonoBehaviour
         // MouseAiming();
         // KeyboardMovement();
 
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.unscaledDeltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.unscaledDeltaTime;
 
         rotX -= mouseY;
         rotX = Mathf.Clamp(rotX, -90f, 90f);
