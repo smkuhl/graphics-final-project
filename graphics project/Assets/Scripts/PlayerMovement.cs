@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -50){
+        if(transform.position.y < -50 || Input.GetKeyDown("r"))
+        {
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
@@ -57,6 +60,25 @@ public class PlayerMovement : MonoBehaviour
         {
             Time.timeScale = 1.0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (collision.gameObject.CompareTag("Door"))
+        {
+            if (SceneManager.GetActiveScene().buildIndex == 5)
+            {
+                // Win screen or smth
+            }
+            else
+            {
+                int nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+                Time.timeScale = 1.0f;
+                SceneManager.LoadScene(nextSceneLoad);
+
+                if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+                {
+                    PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+                }
+            }
         }
     }
 }
