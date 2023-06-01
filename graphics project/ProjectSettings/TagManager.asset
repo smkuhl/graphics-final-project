@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Swing
+  - Door
   layers:
   - Default
   - TransparentFX
