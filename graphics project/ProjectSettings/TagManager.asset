@@ -8,6 +8,7 @@ TagManager:
   - ShrinkTarget
   - Swing
   - WallsEntrance
+  - LightsEntrance
   layers:
   - Default
   - TransparentFX

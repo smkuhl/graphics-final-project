@@ -13,11 +13,10 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public GameObject fallingWalls;
+    public GameObject fallingWalls, bridge;
     private Vector3 velocity;
 
     private bool isGrounded;
-
 
     // Update is called once per frame
     void Update()
@@ -51,6 +50,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter(Collider collision) {
         if (collision.gameObject.CompareTag("Collectible")) {
             collision.gameObject.SetActive(false);
+            bridge.GetComponent<Bridge>().incrementCount();            
         }
         
         if (collision.gameObject.CompareTag("Swing"))
