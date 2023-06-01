@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - ShrinkTarget
+  - Swing
   layers:
   - Default
   - TransparentFX

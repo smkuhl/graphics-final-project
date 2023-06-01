@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -10){
+        if(transform.position.y < -50){
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         
@@ -30,14 +30,12 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded && velocity.y < 0){
             velocity.y = -2f;
-            Debug.Log("on ground");
         }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
-        // speed = speed / Time.timeScale;w
         controller.Move(move * speed * Time.unscaledDeltaTime);
 
         if(Input.GetButtonDown("Jump") && isGrounded){
@@ -53,6 +51,12 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter(Collider collision) {
         if (collision.gameObject.CompareTag("Collectible")) {
             collision.gameObject.SetActive(false);
+        }
+        
+        if (collision.gameObject.CompareTag("Swing"))
+        {
+            Time.timeScale = 1.0f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
