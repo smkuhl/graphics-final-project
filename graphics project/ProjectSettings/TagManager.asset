@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Collectible
   - Swing
+  - WallsEntrance
   layers:
   - Default
   - TransparentFX
