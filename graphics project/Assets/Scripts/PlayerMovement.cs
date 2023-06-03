@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -50 || Input.GetKeyDown("r"))
+        if(transform.position.y < -40 || Input.GetKeyDown("r"))
         {
             Time.timeScale = 1.0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -81,4 +81,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    
 }
