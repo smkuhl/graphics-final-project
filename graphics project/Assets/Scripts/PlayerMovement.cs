@@ -72,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 int nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
                 Time.timeScale = 1.0f;
-                SceneManager.LoadScene(nextSceneLoad);
+                SceneManager.LoadScene("Daniel's Scene");
 
                 if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
                 {
