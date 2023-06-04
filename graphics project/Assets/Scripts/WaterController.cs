@@ -15,11 +15,11 @@ public class WaterController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         gracePeriod -= Time.deltaTime;
         if(gracePeriod <= 0){
-            if(water.transform.position.y < 0){
+            if(water.transform.position.y < -1){
                 water.transform.Translate(new Vector3(0,speed * Time.deltaTime,0));
             }
         }
