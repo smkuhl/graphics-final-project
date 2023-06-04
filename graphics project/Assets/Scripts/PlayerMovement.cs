@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     private Vector3 velocity;
+    //public GameObject water;
 
     private bool isGrounded;
 
@@ -35,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
+        // checks if underwater and adjusts accordingly
+        //if(transform.position.y < water.transform.position.y){
+        //    speed = 0.1f * speed;
+        //}
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -48,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.unscaledDeltaTime;
         // delta y = 1/2 g t^2
         controller.Move(velocity * Time.unscaledDeltaTime);
+
+        
 
     }
 
@@ -81,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
 
     
 }
