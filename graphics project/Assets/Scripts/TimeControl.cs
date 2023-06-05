@@ -6,7 +6,9 @@ using TMPro;
 public class TimeControl : MonoBehaviour
 {
     public TMP_Text timeText;
+    public AudioSource audio;
     private float fixedDeltaTime;
+    private float pitchVal;
 
     void awake() {
         this.fixedDeltaTime = Time.fixedDeltaTime;
@@ -18,8 +20,10 @@ public class TimeControl : MonoBehaviour
         timeText.text = "Time: " + Time.timeScale + "x";
         if (Input.GetKeyDown("q")) {
             Time.timeScale -= 0.25f;
+            audio.pitch -= 0.05f;
         } else if (Input.GetKeyDown("e")){
             Time.timeScale += 0.25f;
+            audio.pitch += 0.05f;
         }
     }
 }
