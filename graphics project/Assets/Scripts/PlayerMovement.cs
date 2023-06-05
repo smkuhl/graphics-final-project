@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if(transform.position.y < -40 || Input.GetKeyDown("r"))
         {

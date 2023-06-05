@@ -7,8 +7,14 @@ TagManager:
   - Collectible
   - ShrinkTarget
   - Swing
+<<<<<<< Updated upstream
   - WallsEntrance
   - LightsEntrance
+=======
+  - Door
+  - Platform
+  - Cannon
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
