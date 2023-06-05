@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 86422cdc8307fbc4288de4cf36e61aa5,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1164,6 +1165,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 51167204444551101, guid: 818114fd51d4b884cbe2aa51f75255e3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1714682347}
+    - target: {fileID: 51167204444551101, guid: 818114fd51d4b884cbe2aa51f75255e3,
+        type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 1568518819}
     - target: {fileID: 51167204444551102, guid: 818114fd51d4b884cbe2aa51f75255e3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -8985,6 +8996,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2072904660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1568518819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8382826156534344680, guid: 2dec81602049c52489709389b1ba1e4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 320361267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1684138908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1775579658715626432, guid: 8a5bd2e4e198f9f469817cfb18d0203d,
@@ -9052,6 +9069,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9df3950b049c15444ac05347917484ca, type: 3}
+--- !u!1 &1714682347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8382826157152333349, guid: 2dec81602049c52489709389b1ba1e4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 320361267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1721894043
 PrefabInstance:
   m_ObjectHideFlags: 0

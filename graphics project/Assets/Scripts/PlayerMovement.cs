@@ -74,13 +74,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 5)
             {
-                // Win screen or smth
+                SceneManager.LoadScene("Win Screen");
             }
             else
             {
                 int nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
                 Time.timeScale = 1.0f;
-                SceneManager.LoadScene("Daniel's Scene");
+                SceneManager.LoadScene(nextSceneLoad);
 
                 if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
                 {
