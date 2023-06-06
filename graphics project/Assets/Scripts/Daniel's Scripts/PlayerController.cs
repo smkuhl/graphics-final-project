@@ -22,8 +22,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // reset level if fallen off or pressing r
-        if(transform.position.y < -50 || Input.GetKeyDown("r"))
+        if (transform.position.y < -50 || Input.GetKeyDown("r"))
+        {
+            Time.timeScale = 1.0f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         
         //  jumping
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -58,6 +61,8 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Door")) {
             if (SceneManager.GetActiveScene().buildIndex == 5) {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 SceneManager.LoadScene("Win Screen");
             } else {
                 int nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
